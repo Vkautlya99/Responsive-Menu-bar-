@@ -11,7 +11,13 @@ function App() {
   
   return (
     <div className="App">
-    <button className="menu-icon" onClick={()=>setMenustatus(!menustatus)}   >&#9776;</button>
+      <button className="menu-icon" onClick={() => setMenustatus(!menustatus)}>
+        {menustatus ?
+          <span>&times;</span>
+          :
+          <span>&#9776;</span>
+      }
+       </button>
       <div className={`menu ${menustatus ? "activeMenu" : ""}`}>
         <ul>
           <li>Home</li><br />
