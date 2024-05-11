@@ -5,20 +5,24 @@ import './App.css';
 function App() {
 
  
-  let [password , setPassword] = useState(false)
-
+  let [menustatus, setMenustatus] = useState(false);
 
 
   
   return (
     <div className="App">
+    <button className="menu-icon" onClick={()=>setMenustatus(!menustatus)}   >&#9776;</button>
+      <div className={`menu ${menustatus ? "activeMenu" : ""}`}>
+        <ul>
+          <li>Home</li><br />
+          <li>About</li><br />
+          <li>Courses</li><br />
+          <li>Contact Us</li><br />
+          <li>LogOut</li><br />
+        </ul>
+      </div>
      
-      <input className='mt-2 bg-slate-300 p-1' type={password ? 'text' : 'password'} />
-      <button className="bg-slate-900 text-white rounded-md p-1 ml-2" onClick = {() => setPassword(!password)}> {password ? "Hide" : 'Show'} </button>
-      <br />
-      <br />
-      <br />
-      <br />
+     
     
 
       

@@ -2,3 +2,33 @@
   text-align: center;
 }
 
+.menu{
+  width: 30% ;
+  margin-left: auto;
+  left : -100%;
+  height: 100vh ;
+  text-align: left;
+  position: fixed;
+  background-color: gray;
+  padding: 20px;
+  transition: 0.5ms;
+}
+
+.menu ul li {
+  border-left-style: none;
+}
+
+.activeMenu {
+  left : 0%;
+}
+
+.menu-icon{
+  position: absolute;
+  right: 10px;
+  background-color: bisque;
+  width: 25px;
+  height: 30px;
+  margin-top: 5px;
+
+}
+
